@@ -36,20 +36,20 @@
 		70993B511467EE16003812B7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		70993B521467EE16003812B7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		70993B531467EE16003812B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		70993B561467EE16003812B7 /* MNLMes-Info.plist */ = {isa = PBXFileReference; path = "MNLMes-Info.plist"; sourceTree = "<group>"; };
+		70993B561467EE16003812B7 /* MNLMes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MNLMes-Info.plist"; sourceTree = "<group>"; };
 		70993B581467EE16003812B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		70993B5A1467EE16003812B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		70993B5C1467EE16003812B7 /* MNLMes-Prefix.pch */ = {isa = PBXFileReference; path = "MNLMes-Prefix.pch"; sourceTree = "<group>"; };
+		70993B5C1467EE16003812B7 /* MNLMes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNLMes-Prefix.pch"; sourceTree = "<group>"; };
 		70993B5E1467EE17003812B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		70993B601467EE17003812B7 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		70993B601467EE17003812B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		70993B611467EE17003812B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		70993B641467EE17003812B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		70993B671467EE17003812B7 /* MNLMes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MNLMes.xcdatamodel; sourceTree = "<group>"; };
 		70993B6E1467EE17003812B7 /* MNLMesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MNLMesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70993B6F1467EE17003812B7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		70993B761467EE17003812B7 /* MNLMesTests-Info.plist */ = {isa = PBXFileReference; path = "MNLMesTests-Info.plist"; sourceTree = "<group>"; };
+		70993B761467EE17003812B7 /* MNLMesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MNLMesTests-Info.plist"; sourceTree = "<group>"; };
 		70993B781467EE17003812B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		70993B7A1467EE17003812B7 /* MNLMesTests.h */ = {isa = PBXFileReference; path = MNLMesTests.h; sourceTree = "<group>"; };
+		70993B7A1467EE17003812B7 /* MNLMesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNLMesTests.h; sourceTree = "<group>"; };
 		70993B7B1467EE17003812B7 /* MNLMesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNLMesTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
