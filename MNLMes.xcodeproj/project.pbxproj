@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70016888147130F300E685E5 /* Elements.m in Sources */ = {isa = PBXBuildFile; fileRef = 70016887147130F300E685E5 /* Elements.m */; };
+		7001688B147130F400E685E5 /* Nodes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7001688A147130F400E685E5 /* Nodes.m */; };
+		7030CFAA147028EB0079CB9E /* CDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030CFA9147028EB0079CB9E /* CDModel.m */; };
+		7030CFAE1470301A0079CB9E /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030CFAD147030190079CB9E /* Helpers.m */; };
+		7030CFBD147048530079CB9E /* GlobalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030CFBC147048530079CB9E /* GlobalController.m */; };
 		70993B4F1467EE16003812B7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70993B4E1467EE16003812B7 /* Cocoa.framework */; };
 		70993B591467EE16003812B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70993B571467EE16003812B7 /* InfoPlist.strings */; };
 		70993B5B1467EE16003812B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70993B5A1467EE16003812B7 /* main.m */; };
@@ -18,6 +23,8 @@
 		70993B711467EE17003812B7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70993B4E1467EE16003812B7 /* Cocoa.framework */; };
 		70993B791467EE17003812B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70993B771467EE17003812B7 /* InfoPlist.strings */; };
 		70993B7C1467EE17003812B7 /* MNLMesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70993B7B1467EE17003812B7 /* MNLMesTests.m */; };
+		70993B8E1467F29A003812B7 /* FEMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70993B8D1467F29A003812B7 /* FEMView.m */; };
+		70FC956E147181BC00584B3F /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FC956D147181BC00584B3F /* NSFileManager+DirectoryLocations.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +38,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		70016886147130F300E685E5 /* Elements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Elements.h; sourceTree = "<group>"; };
+		70016887147130F300E685E5 /* Elements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Elements.m; sourceTree = "<group>"; };
+		70016889147130F400E685E5 /* Nodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nodes.h; sourceTree = "<group>"; };
+		7001688A147130F400E685E5 /* Nodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nodes.m; sourceTree = "<group>"; };
+		7030CFA8147028EB0079CB9E /* CDModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDModel.h; sourceTree = "<group>"; };
+		7030CFA9147028EB0079CB9E /* CDModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDModel.m; sourceTree = "<group>"; };
+		7030CFAC147030190079CB9E /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		7030CFAD147030190079CB9E /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
+		7030CFBB147048530079CB9E /* GlobalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalController.h; sourceTree = "<group>"; };
+		7030CFBC147048530079CB9E /* GlobalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalController.m; sourceTree = "<group>"; };
 		70993B4A1467EE16003812B7 /* MNLMes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNLMes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70993B4E1467EE16003812B7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		70993B511467EE16003812B7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -51,6 +68,10 @@
 		70993B781467EE17003812B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		70993B7A1467EE17003812B7 /* MNLMesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNLMesTests.h; sourceTree = "<group>"; };
 		70993B7B1467EE17003812B7 /* MNLMesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNLMesTests.m; sourceTree = "<group>"; };
+		70993B8C1467F29A003812B7 /* FEMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEMView.h; sourceTree = "<group>"; };
+		70993B8D1467F29A003812B7 /* FEMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMView.m; sourceTree = "<group>"; };
+		70FC956C147181BC00584B3F /* NSFileManager+DirectoryLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DirectoryLocations.h"; sourceTree = "<group>"; };
+		70FC956D147181BC00584B3F /* NSFileManager+DirectoryLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DirectoryLocations.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +95,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7030CFA7147028BD0079CB9E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				70016889147130F400E685E5 /* Nodes.h */,
+				7001688A147130F400E685E5 /* Nodes.m */,
+				70016886147130F300E685E5 /* Elements.h */,
+				70016887147130F300E685E5 /* Elements.m */,
+				7030CFA8147028EB0079CB9E /* CDModel.h */,
+				7030CFA9147028EB0079CB9E /* CDModel.m */,
+				70993B661467EE17003812B7 /* MNLMes.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		7030CFAB14702D460079CB9E /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				70FC956C147181BC00584B3F /* NSFileManager+DirectoryLocations.h */,
+				70FC956D147181BC00584B3F /* NSFileManager+DirectoryLocations.m */,
+				7030CFA7147028BD0079CB9E /* CoreData */,
+				7030CFAC147030190079CB9E /* Helpers.h */,
+				7030CFAD147030190079CB9E /* Helpers.m */,
+			);
+			name = helpers;
+			sourceTree = "<group>";
+		};
+		7030CFB9147047D20079CB9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				70993B8C1467F29A003812B7 /* FEMView.h */,
+				70993B8D1467F29A003812B7 /* FEMView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7030CFBA147047E70079CB9E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7030CFBB147048530079CB9E /* GlobalController.h */,
+				7030CFBC147048530079CB9E /* GlobalController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		70993B3F1467EE16003812B7 = {
 			isa = PBXGroup;
 			children = (
@@ -116,11 +181,13 @@
 		70993B541467EE16003812B7 /* MNLMes */ = {
 			isa = PBXGroup;
 			children = (
+				7030CFBA147047E70079CB9E /* Controllers */,
+				7030CFAB14702D460079CB9E /* helpers */,
 				70993B601467EE17003812B7 /* AppDelegate.h */,
 				70993B611467EE17003812B7 /* AppDelegate.m */,
 				70993B631467EE17003812B7 /* MainMenu.xib */,
-				70993B661467EE17003812B7 /* MNLMes.xcdatamodeld */,
 				70993B551467EE16003812B7 /* Supporting Files */,
+				7030CFB9147047D20079CB9E /* Views */,
 			);
 			path = MNLMes;
 			sourceTree = "<group>";
@@ -266,6 +333,13 @@
 				70993B5B1467EE16003812B7 /* main.m in Sources */,
 				70993B621467EE17003812B7 /* AppDelegate.m in Sources */,
 				70993B681467EE17003812B7 /* MNLMes.xcdatamodeld in Sources */,
+				70993B8E1467F29A003812B7 /* FEMView.m in Sources */,
+				7030CFAA147028EB0079CB9E /* CDModel.m in Sources */,
+				7030CFAE1470301A0079CB9E /* Helpers.m in Sources */,
+				7030CFBD147048530079CB9E /* GlobalController.m in Sources */,
+				70016888147130F300E685E5 /* Elements.m in Sources */,
+				7001688B147130F400E685E5 /* Nodes.m in Sources */,
+				70FC956E147181BC00584B3F /* NSFileManager+DirectoryLocations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +447,7 @@
 		70993B801467EE17003812B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MNLMes/MNLMes-Prefix.pch";
 				INFOPLIST_FILE = "MNLMes/MNLMes-Info.plist";
@@ -384,6 +459,7 @@
 		70993B811467EE17003812B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MNLMes/MNLMes-Prefix.pch";
 				INFOPLIST_FILE = "MNLMes/MNLMes-Info.plist";
@@ -439,6 +515,7 @@
 				70993B811467EE17003812B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70993B821467EE17003812B7 /* Build configuration list for PBXNativeTarget "MNLMesTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +524,7 @@
 				70993B841467EE17003812B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

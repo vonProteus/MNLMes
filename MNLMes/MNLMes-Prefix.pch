@@ -4,4 +4,13 @@
 
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
+    #import "Helpers.h"
 #endif
+
+
+#ifdef DEBUG//=1
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define DLog(...)
+#endif
+
