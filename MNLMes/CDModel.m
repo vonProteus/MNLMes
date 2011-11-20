@@ -80,7 +80,7 @@
     if (_persistentStoreCoordinator) {
         return _persistentStoreCoordinator;
     }
-    DLog(@"%@",[[NSFileManager defaultManager] applicationSupportDirectory]);
+//    DLog(@"%@",[[NSFileManager defaultManager] applicationSupportDirectory]);
     
 
     NSURL *libraryPath = [NSURL fileURLWithPath:[[NSFileManager defaultManager] applicationSupportDirectory]];
@@ -256,6 +256,12 @@
     elem.n1 = nn1;
     elem.n2 = nn2;
     elem.n3 = nn3;
+    
+    [nn1 addLokObject:elem];
+    [nn2 addLokObject:elem];
+    [nn3 addLokObject:elem];
+    
+    
     
 //    DLog(@"ok");
     return elem;

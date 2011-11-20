@@ -10,6 +10,8 @@
 
 @implementation FEMView
 
+@synthesize mode;
+
 -(id) init{
     self = [super init];
     
@@ -57,12 +59,28 @@
 }
 
 - (void)drawNodes{
+    NSColor* rgba;
+    
+    switch (self.mode) {
+        case blank:
+            rgba = [NSColor blackColor];
+            break;
+        case dxdy:
+            rgba = [NSColor blueColor];
+            break;
+            
+        default:
+            rgba = [NSColor blackColor];
+            break;
+    }
+
 //    DLog(@"start");
     for (Nodes* n in [coreData allNodes]) {
 //        [n dlog];
         [self drawCirclePoint:[Helpers locationInGCS:[n pointValue] 
                                     fromCenterOfRect:self.bounds]
-                            R:3];
+                            R:3 
+                    WithColor:rgba];
         
     }
     
@@ -70,20 +88,23 @@
 
 - (void)drawCircleX: (double)x 
                   Y: (double)y 
-                  R: (double)r{
+                  R: (double)r
+          WithColor:(NSColor *)rgba{
 //    DLog(@"ok");
     NSRect rect = NSMakeRect(x-r, y-r, 2*r, 2*r);
     NSBezierPath* path = [NSBezierPath bezierPath];
     [path appendBezierPathWithOvalInRect:rect];
     
-    
+    [rgba set];
+
     [path stroke];
 
 }
 
 - (void)drawCirclePoint: (NSPoint)center
-                      R: (double)r{
-    [self drawCircleX:center.x Y:center.y R:r];
+                      R: (double)r
+              WithColor:(NSColor *)rgba{
+    [self drawCircleX:center.x Y:center.y R:r WithColor:rgba];
 }
 
 - (void) mouseDown:(NSEvent*)someEvent {
@@ -104,27 +125,65 @@
 }
 
 -(void) drawElemenys{
+    NSColor* rgba;
+    
+    switch (self.mode) {
+        case blank:
+            rgba = [NSColor greenColor];
+            break;
+        case dxdy:
+            rgba = [NSColor redColor];
+            break;
+            
+        default:
+            rgba = [NSColor blackColor];
+            break;
+    }
+    
+    
     for (Elements* e in [coreData allElements]) {
-        [self drawElement:e];
+        [self drawElement:e WithColor:rgba];
     }
     
 }
 
--(void) drawElement:(Elements *)elem{
+-(void) drawElement:(Elements *)elem WithColor:(NSColor *)rgba{
     NSBezierPath* path = [NSBezierPath bezierPath];
-    [path moveToPoint:[Helpers locationInGCS:[elem.n1 pointValue]  
+    [rgba set];
+    NSPoint p1,p2,p3;
+    switch (self.mode) {
+        case blank:
+            p1 = [elem.n1 pointValue];
+            p2 = [elem.n2 pointValue];
+            p3 = [elem.n3 pointValue];
+            break;
+        case dxdy:
+            p1 = [elem.n1 pointValueDxDy];
+            p2 = [elem.n2 pointValueDxDy];
+            p3 = [elem.n3 pointValueDxDy];
+            break;
+            
+        default:
+            p1 = [elem.n1 pointValue];
+            p2 = [elem.n2 pointValue];
+            p3 = [elem.n3 pointValue];
+            break;
+    }
+    
+    
+    [path moveToPoint:[Helpers locationInGCS:p1  
                             fromCenterOfRect:self.bounds]];  
     
     //1-2
-    [path lineToPoint:[Helpers locationInGCS:[elem.n2 pointValue]  
+    [path lineToPoint:[Helpers locationInGCS:p2  
                             fromCenterOfRect:self.bounds]];
 
     //2-3
-    [path lineToPoint:[Helpers locationInGCS:[elem.n3 pointValue]  
+    [path lineToPoint:[Helpers locationInGCS:p3  
                             fromCenterOfRect:self.bounds]];
 
     //3-1
-    [path lineToPoint:[Helpers locationInGCS:[elem.n1 pointValue]  
+    [path lineToPoint:[Helpers locationInGCS:p1  
                             fromCenterOfRect:self.bounds]];
 
     

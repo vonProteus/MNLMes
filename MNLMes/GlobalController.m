@@ -32,7 +32,7 @@
 
 -(IBAction) addData:(id)sender{
     [self cleanNodes:nil];
-    int r = 20;
+    int r = 25;
     NSMutableArray* elems = [[NSMutableArray alloc] init];
     for (int a = -5; a <= 5; ++a) {
         NSMutableArray* line = [[NSMutableArray alloc] init];
@@ -56,12 +56,18 @@
         }
     }
     
-    
+    [coreData saveCD];
     [fEMView display];
     
 }
 
 -(IBAction) addMash:(id)sender{
+    
+    Elements* elm = [[coreData allElements] objectAtIndex:50];
+    
+    for (Elements* elm2 in elm.n1.lok){
+        [elm2.n1 dlog];
+    }
     
 }
 

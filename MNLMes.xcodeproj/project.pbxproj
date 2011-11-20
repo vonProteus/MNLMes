@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		70016888147130F300E685E5 /* Elements.m in Sources */ = {isa = PBXBuildFile; fileRef = 70016887147130F300E685E5 /* Elements.m */; };
-		7001688B147130F400E685E5 /* Nodes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7001688A147130F400E685E5 /* Nodes.m */; };
 		7030CFAA147028EB0079CB9E /* CDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030CFA9147028EB0079CB9E /* CDModel.m */; };
 		7030CFAE1470301A0079CB9E /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030CFAD147030190079CB9E /* Helpers.m */; };
 		7030CFBD147048530079CB9E /* GlobalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030CFBC147048530079CB9E /* GlobalController.m */; };
@@ -24,6 +22,8 @@
 		70993B791467EE17003812B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70993B771467EE17003812B7 /* InfoPlist.strings */; };
 		70993B7C1467EE17003812B7 /* MNLMesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70993B7B1467EE17003812B7 /* MNLMesTests.m */; };
 		70993B8E1467F29A003812B7 /* FEMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70993B8D1467F29A003812B7 /* FEMView.m */; };
+		709A3B3A14796A5F0020D838 /* Nodes.m in Sources */ = {isa = PBXBuildFile; fileRef = 709A3B3914796A5F0020D838 /* Nodes.m */; };
+		709A3B3D14796BE40020D838 /* Elements.m in Sources */ = {isa = PBXBuildFile; fileRef = 709A3B3C14796BE40020D838 /* Elements.m */; };
 		70FC956E147181BC00584B3F /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FC956D147181BC00584B3F /* NSFileManager+DirectoryLocations.m */; };
 /* End PBXBuildFile section */
 
@@ -38,10 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		70016886147130F300E685E5 /* Elements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Elements.h; sourceTree = "<group>"; };
-		70016887147130F300E685E5 /* Elements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Elements.m; sourceTree = "<group>"; };
-		70016889147130F400E685E5 /* Nodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nodes.h; sourceTree = "<group>"; };
-		7001688A147130F400E685E5 /* Nodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nodes.m; sourceTree = "<group>"; };
 		7030CFA8147028EB0079CB9E /* CDModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDModel.h; sourceTree = "<group>"; };
 		7030CFA9147028EB0079CB9E /* CDModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDModel.m; sourceTree = "<group>"; };
 		7030CFAC147030190079CB9E /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
@@ -70,6 +66,10 @@
 		70993B7B1467EE17003812B7 /* MNLMesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNLMesTests.m; sourceTree = "<group>"; };
 		70993B8C1467F29A003812B7 /* FEMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEMView.h; sourceTree = "<group>"; };
 		70993B8D1467F29A003812B7 /* FEMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMView.m; sourceTree = "<group>"; };
+		709A3B3814796A5F0020D838 /* Nodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nodes.h; sourceTree = "<group>"; };
+		709A3B3914796A5F0020D838 /* Nodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nodes.m; sourceTree = "<group>"; };
+		709A3B3B14796BE40020D838 /* Elements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Elements.h; sourceTree = "<group>"; };
+		709A3B3C14796BE40020D838 /* Elements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Elements.m; sourceTree = "<group>"; };
 		70FC956C147181BC00584B3F /* NSFileManager+DirectoryLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DirectoryLocations.h"; sourceTree = "<group>"; };
 		70FC956D147181BC00584B3F /* NSFileManager+DirectoryLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DirectoryLocations.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,13 +98,13 @@
 		7030CFA7147028BD0079CB9E /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				70016889147130F400E685E5 /* Nodes.h */,
-				7001688A147130F400E685E5 /* Nodes.m */,
-				70016886147130F300E685E5 /* Elements.h */,
-				70016887147130F300E685E5 /* Elements.m */,
 				7030CFA8147028EB0079CB9E /* CDModel.h */,
 				7030CFA9147028EB0079CB9E /* CDModel.m */,
+				709A3B3814796A5F0020D838 /* Nodes.h */,
+				709A3B3914796A5F0020D838 /* Nodes.m */,
 				70993B661467EE17003812B7 /* MNLMes.xcdatamodeld */,
+				709A3B3B14796BE40020D838 /* Elements.h */,
+				709A3B3C14796BE40020D838 /* Elements.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -337,9 +337,9 @@
 				7030CFAA147028EB0079CB9E /* CDModel.m in Sources */,
 				7030CFAE1470301A0079CB9E /* Helpers.m in Sources */,
 				7030CFBD147048530079CB9E /* GlobalController.m in Sources */,
-				70016888147130F300E685E5 /* Elements.m in Sources */,
-				7001688B147130F400E685E5 /* Nodes.m in Sources */,
 				70FC956E147181BC00584B3F /* NSFileManager+DirectoryLocations.m in Sources */,
+				709A3B3A14796A5F0020D838 /* Nodes.m in Sources */,
+				709A3B3D14796BE40020D838 /* Elements.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

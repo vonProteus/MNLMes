@@ -9,20 +9,30 @@
 #import <Cocoa/Cocoa.h>
 #import "CDModel.h"
 
+typedef enum FEMViewMode {
+    blank,
+    dxdy
+}FEMViewMode;
+
 
 @interface FEMView : NSView {
     CDModel* coreData;
 }
+
+@property (assign) FEMViewMode mode;
 
 - (void)makeCoordinateSistem;
 - (void)drawNodes;
 - (void)drawElemenys;
 - (void)drawCircleX: (double)x
                   Y: (double)y 
-                  R: (double)r;
+                  R: (double)r
+          WithColor:(NSColor*) rgba;
 
 - (void)drawCirclePoint: (NSPoint)center
-                      R: (double)r;
+                      R: (double)r
+              WithColor:(NSColor *)rgba;
 
-- (void)drawElement:(Elements*)elem;
+- (void)drawElement:(Elements*)elem 
+          WithColor:(NSColor*) rgba;;
 @end

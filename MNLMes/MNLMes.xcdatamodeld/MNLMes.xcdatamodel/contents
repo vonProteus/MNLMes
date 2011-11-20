@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Elements" representedClassName="Elements" syncable="YES">
-        <relationship name="n1" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Nodes" syncable="YES"/>
-        <relationship name="n2" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Nodes" syncable="YES"/>
-        <relationship name="n3" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Nodes" syncable="YES"/>
+        <relationship name="n1" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Nodes" inverseName="lok" inverseEntity="Nodes" syncable="YES"/>
+        <relationship name="n2" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Nodes" inverseName="lok" inverseEntity="Nodes" syncable="YES"/>
+        <relationship name="n3" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Nodes" inverseName="lok" inverseEntity="Nodes" syncable="YES"/>
     </entity>
     <entity name="Nodes" representedClassName="Nodes" syncable="YES">
         <attribute name="dx" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="dy" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="ex" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="ey" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="number" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="x" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="y" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="lok" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Elements" inverseName="n3" inverseEntity="Elements" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Nodes" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="Elements" positionX="-18" positionY="180" width="128" height="90"/>
+        <element name="Elements" positionX="-65" positionY="495" width="128" height="90"/>
+        <element name="Nodes" positionX="297" positionY="108" width="128" height="180"/>
     </elements>
 </model>
