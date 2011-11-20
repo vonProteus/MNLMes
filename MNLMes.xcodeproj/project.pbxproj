@@ -24,6 +24,7 @@
 		70993B8E1467F29A003812B7 /* FEMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70993B8D1467F29A003812B7 /* FEMView.m */; };
 		709A3B3A14796A5F0020D838 /* Nodes.m in Sources */ = {isa = PBXBuildFile; fileRef = 709A3B3914796A5F0020D838 /* Nodes.m */; };
 		709A3B3D14796BE40020D838 /* Elements.m in Sources */ = {isa = PBXBuildFile; fileRef = 709A3B3C14796BE40020D838 /* Elements.m */; };
+		709A3B3F14799A7C0020D838 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 709A3B3E14799A7C0020D838 /* README */; };
 		70FC956E147181BC00584B3F /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FC956D147181BC00584B3F /* NSFileManager+DirectoryLocations.m */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		709A3B3914796A5F0020D838 /* Nodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nodes.m; sourceTree = "<group>"; };
 		709A3B3B14796BE40020D838 /* Elements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Elements.h; sourceTree = "<group>"; };
 		709A3B3C14796BE40020D838 /* Elements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Elements.m; sourceTree = "<group>"; };
+		709A3B3E14799A7C0020D838 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		70FC956C147181BC00584B3F /* NSFileManager+DirectoryLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DirectoryLocations.h"; sourceTree = "<group>"; };
 		70FC956D147181BC00584B3F /* NSFileManager+DirectoryLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DirectoryLocations.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 		70993B3F1467EE16003812B7 = {
 			isa = PBXGroup;
 			children = (
+				709A3B3E14799A7C0020D838 /* README */,
 				70993B541467EE16003812B7 /* MNLMes */,
 				70993B741467EE17003812B7 /* MNLMesTests */,
 				70993B4D1467EE16003812B7 /* Frameworks */,
@@ -296,6 +299,7 @@
 				70993B591467EE16003812B7 /* InfoPlist.strings in Resources */,
 				70993B5F1467EE17003812B7 /* Credits.rtf in Resources */,
 				70993B651467EE17003812B7 /* MainMenu.xib in Resources */,
+				709A3B3F14799A7C0020D838 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
