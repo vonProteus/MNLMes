@@ -31,7 +31,7 @@
 }
 
 -(void) dlog{
-    DLog(@"%i (%f,%f) dx:%f dy:%f ex:%f ey:%f status:%i", self.number, self.x, self.y, self.dx, self.dy, self.ex, self.ey, self.status);
+    DLog(@"%@ (%f,%f) dx:%f dy:%f ex:%f ey:%f status:%@", self.number, [self.x doubleValue], [self.y doubleValue], [self.dx doubleValue], [self.dy doubleValue], [self.ex doubleValue], [self.ey doubleValue], self.status);
 }
 
 @end

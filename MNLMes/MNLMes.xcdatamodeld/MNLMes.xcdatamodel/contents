@@ -14,7 +14,7 @@
         <attribute name="status" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="x" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="y" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="lok" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Elements" inverseName="n3" inverseEntity="Elements" syncable="YES"/>
+        <relationship name="lok" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Elements" inverseName="n1" inverseEntity="Elements" syncable="YES"/>
     </entity>
     <elements>
         <element name="Elements" positionX="-65" positionY="495" width="128" height="90"/>

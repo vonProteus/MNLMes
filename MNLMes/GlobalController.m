@@ -62,12 +62,24 @@
 }
 
 -(IBAction) addMash:(id)sender{
-    
-    Elements* elm = [[coreData allElements] objectAtIndex:50];
-    
-    for (Elements* elm2 in elm.n1.lok){
-        [elm2.n1 dlog];
+    DLog(@"---------------");
+    Nodes* n = [[coreData allNodes] objectAtIndex:50];
+    NSMutableSet* sett = [[NSMutableSet alloc] init];
+    DLog(@"lok: %i", [n.lok count]);
+    for (Elements* elm in n.lok){
+        [sett addObject:elm.n1.number];
+        [sett addObject:elm.n2.number];
+        [sett addObject:elm.n3.number];
     }
+    
+    for (NSNumber* n in sett) {
+        DLog(@"%@",n);
+    }
+    DLog(@"count %i", [sett count]);
+    
+    [coreData removeNodeByNumber:[n.number integerValue]];
+    
+    [fEMView display];
     
 }
 
