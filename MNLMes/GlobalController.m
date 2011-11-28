@@ -65,7 +65,7 @@
     DLog(@"---------------");
     Nodes* n = [[coreData allNodes] objectAtIndex:50];
     NSMutableSet* sett = [[NSMutableSet alloc] init];
-    DLog(@"lok: %i", [n.lok count]);
+    DLog(@"lok: %ld", [n.lok count]);
     for (Elements* elm in n.lok){
         [sett addObject:elm.n1.number];
         [sett addObject:elm.n2.number];
@@ -75,7 +75,7 @@
     for (NSNumber* n in sett) {
         DLog(@"%@",n);
     }
-    DLog(@"count %i", [sett count]);
+    DLog(@"count %ld", [sett count]);
     
     [coreData removeNodeByNumber:[n.number integerValue]];
     

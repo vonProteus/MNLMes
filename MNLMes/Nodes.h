@@ -23,9 +23,6 @@
 @property (nonatomic, retain) NSNumber * ey;
 @property (nonatomic, retain) NSSet *lok;
 
--(NSPoint) pointValue;
--(NSPoint) pointValueDxDy;
--(void) dlog;
 
 @end
 

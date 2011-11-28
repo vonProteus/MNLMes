@@ -10,6 +10,9 @@
 		7030CFAA147028EB0079CB9E /* CDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030CFA9147028EB0079CB9E /* CDModel.m */; };
 		7030CFAE1470301A0079CB9E /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030CFAD147030190079CB9E /* Helpers.m */; };
 		7030CFBD147048530079CB9E /* GlobalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030CFBC147048530079CB9E /* GlobalController.m */; };
+		70806C6014839E1200D1D5C0 /* Solver.m in Sources */ = {isa = PBXBuildFile; fileRef = 70806C5F14839E1200D1D5C0 /* Solver.m */; };
+		70806C641483A3E600D1D5C0 /* Elements+Metods.m in Sources */ = {isa = PBXBuildFile; fileRef = 70806C631483A3E600D1D5C0 /* Elements+Metods.m */; };
+		70806C671483A41600D1D5C0 /* Nodes+Metods.m in Sources */ = {isa = PBXBuildFile; fileRef = 70806C661483A41600D1D5C0 /* Nodes+Metods.m */; };
 		70993B4F1467EE16003812B7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70993B4E1467EE16003812B7 /* Cocoa.framework */; };
 		70993B591467EE16003812B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70993B571467EE16003812B7 /* InfoPlist.strings */; };
 		70993B5B1467EE16003812B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70993B5A1467EE16003812B7 /* main.m */; };
@@ -45,6 +48,12 @@
 		7030CFAD147030190079CB9E /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
 		7030CFBB147048530079CB9E /* GlobalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalController.h; sourceTree = "<group>"; };
 		7030CFBC147048530079CB9E /* GlobalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalController.m; sourceTree = "<group>"; };
+		70806C5E14839E1200D1D5C0 /* Solver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Solver.h; sourceTree = "<group>"; };
+		70806C5F14839E1200D1D5C0 /* Solver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Solver.m; sourceTree = "<group>"; };
+		70806C621483A3E600D1D5C0 /* Elements+Metods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Elements+Metods.h"; sourceTree = "<group>"; };
+		70806C631483A3E600D1D5C0 /* Elements+Metods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Elements+Metods.m"; sourceTree = "<group>"; };
+		70806C651483A41600D1D5C0 /* Nodes+Metods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Nodes+Metods.h"; sourceTree = "<group>"; };
+		70806C661483A41600D1D5C0 /* Nodes+Metods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Nodes+Metods.m"; sourceTree = "<group>"; };
 		70993B4A1467EE16003812B7 /* MNLMes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNLMes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70993B4E1467EE16003812B7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		70993B511467EE16003812B7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -102,11 +111,12 @@
 			children = (
 				7030CFA8147028EB0079CB9E /* CDModel.h */,
 				7030CFA9147028EB0079CB9E /* CDModel.m */,
-				709A3B3814796A5F0020D838 /* Nodes.h */,
-				709A3B3914796A5F0020D838 /* Nodes.m */,
+				70806C611483A3B900D1D5C0 /* Baisic */,
 				70993B661467EE17003812B7 /* MNLMes.xcdatamodeld */,
-				709A3B3B14796BE40020D838 /* Elements.h */,
-				709A3B3C14796BE40020D838 /* Elements.m */,
+				70806C621483A3E600D1D5C0 /* Elements+Metods.h */,
+				70806C631483A3E600D1D5C0 /* Elements+Metods.m */,
+				70806C651483A41600D1D5C0 /* Nodes+Metods.h */,
+				70806C661483A41600D1D5C0 /* Nodes+Metods.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -139,6 +149,26 @@
 				7030CFBC147048530079CB9E /* GlobalController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		70806C5D14839DEE00D1D5C0 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				70806C5E14839E1200D1D5C0 /* Solver.h */,
+				70806C5F14839E1200D1D5C0 /* Solver.m */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		70806C611483A3B900D1D5C0 /* Baisic */ = {
+			isa = PBXGroup;
+			children = (
+				709A3B3814796A5F0020D838 /* Nodes.h */,
+				709A3B3914796A5F0020D838 /* Nodes.m */,
+				709A3B3B14796BE40020D838 /* Elements.h */,
+				709A3B3C14796BE40020D838 /* Elements.m */,
+			);
+			name = Baisic;
 			sourceTree = "<group>";
 		};
 		70993B3F1467EE16003812B7 = {
@@ -184,13 +214,14 @@
 		70993B541467EE16003812B7 /* MNLMes */ = {
 			isa = PBXGroup;
 			children = (
+				70806C5D14839DEE00D1D5C0 /* Logic */,
 				7030CFBA147047E70079CB9E /* Controllers */,
+				7030CFB9147047D20079CB9E /* Views */,
 				7030CFAB14702D460079CB9E /* helpers */,
 				70993B601467EE17003812B7 /* AppDelegate.h */,
 				70993B611467EE17003812B7 /* AppDelegate.m */,
 				70993B631467EE17003812B7 /* MainMenu.xib */,
 				70993B551467EE16003812B7 /* Supporting Files */,
-				7030CFB9147047D20079CB9E /* Views */,
 			);
 			path = MNLMes;
 			sourceTree = "<group>";
@@ -344,6 +375,9 @@
 				70FC956E147181BC00584B3F /* NSFileManager+DirectoryLocations.m in Sources */,
 				709A3B3A14796A5F0020D838 /* Nodes.m in Sources */,
 				709A3B3D14796BE40020D838 /* Elements.m in Sources */,
+				70806C6014839E1200D1D5C0 /* Solver.m in Sources */,
+				70806C641483A3E600D1D5C0 /* Elements+Metods.m in Sources */,
+				70806C671483A41600D1D5C0 /* Nodes+Metods.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "Nodes.h"
-#import "Elements.h"
+#import "Nodes+Metods.h"
+#import "Elements+Metods.h"
 
 
 @interface CDModel : NSObject {
