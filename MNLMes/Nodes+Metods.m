@@ -8,6 +8,7 @@
 
 #import "Nodes+Metods.h"
 #import "Elements+Metods.h"
+#import "PlistConf.h"
 
 @implementation Nodes (Metods)
 
@@ -16,20 +17,25 @@
 }
 
 -(NSPoint) pointValueDxDy{
-    return NSMakePoint([self.x doubleValue] + [self.dx doubleValue], [self.y doubleValue]+ [self.dx doubleValue]);
+    return NSMakePoint([self.x doubleValue] + [self.dx doubleValue], [self.y doubleValue]+ [self.dy doubleValue]);
 }
 
 -(void) dlog{
     DLog(@"%@ (%f,%f) dx:%f dy:%f ex:%f ey:%f status:%@", self.number, [self.x doubleValue], [self.y doubleValue], [self.dx doubleValue], [self.dy doubleValue], [self.ex doubleValue], [self.ey doubleValue], self.status);
 }
 
--(double) getFunNode{
+-(double) getFunNodeWithA:(double)a 
+                     andb:(double)b 
+                     andE:(double)E 
+                     andk:(double)k{
     double getFunNode = 0;
     double Je = 0;
     
-    
     for (Elements* e in self.lok) {
-        Je = [e clcFunkcional];
+        Je = [e clcFunkcionalWithA:a 
+                              andb:b 
+                              andE:E 
+                              andk:k];
         getFunNode += Je;
     }
     

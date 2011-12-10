@@ -13,7 +13,10 @@
 @implementation Elements (Metods)
 
 
--(double) clcFunkcional {
+-(double) clcFunkcionalWithA:(double)a 
+                        andb:(double)b 
+                        andE:(double)E 
+                        andk:(double)k {
     double clcFunkcional = 0;
     
     double x1 = [((Nodes*)self.n1).x doubleValue];
@@ -48,15 +51,15 @@
     double Ei = (sqrt(2)/3)*((Ex - Ey)*(Ex - Ey) + Ex*Ex + Ey*Ey + 6*Exy*Exy);
     double E0 = (Ex + Ey)/3;
     
-    double a = [[PlistConf valueForKey:@"aFromSi=a*Ei^b"] doubleValue];
-    double b = [[PlistConf valueForKey:@"bFromSi=a*Ei^b"] doubleValue];
+//    double a = [[PlistConf valueForKey:@"aFromSi=a*Ei^b"] doubleValue];
+//    double b = [[PlistConf valueForKey:@"bFromSi=a*Ei^b"] doubleValue];
+//    
+//    double E = [[PlistConf valueForKey:@"EFromClcFunkcional"] doubleValue];
+//    double k = [[PlistConf valueForKey:@"kFromClcFunkcional"] doubleValue];
     
-    double E = [[PlistConf valueForKey:@"EFromClcFunkcional"] doubleValue];
-    double k = [[PlistConf valueForKey:@"kFromClcFunkcional"] doubleValue];
     
-    
-    double Je = a*pow(Ei, (b + 1)) / (b + 1)*Ae + k*E0*E0*Ae;
-//    double Je = E*Ei*Ei*Ae + k*E0*E0*Ae;
+//    double Je = a*pow(Ei, (b + 1)) / (b + 1)*Ae + k*E0*E0*Ae;
+    double Je = E*Ei*Ei*Ae + k*E0*E0*Ae;
 
     clcFunkcional = Je;
     
