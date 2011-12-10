@@ -10,4 +10,7 @@
 
 @interface Elements (Metods)
 
+-(double) clcFunkcional;
+
+
 @end

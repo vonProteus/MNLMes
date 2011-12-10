@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "CDModel.h"
 #import "FEMView.h"
+#import "Solver.h"
+#import "PlistConf.h"
 
 @interface GlobalController : NSObject {
     CDModel* coreData;
 }
 @property (retain) IBOutlet FEMView *fEMView;
+@property (retain) IBOutlet NSProgressIndicator *progress;
 
 -(IBAction) cleanNodes:(id)sender;
 -(IBAction) removeLastNode:(id)sender;

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aFromSi=a*Ei^b</key>
+	<integer>2000</integer>
+	<key>bFromSi=a*Ei^b</key>
+	<real>0.18</real>
+	<key>numberOfIteration</key>
+	<integer>800</integer>
+	<key>EFromClcFunkcional</key>
+	<integer>1</integer>
+	<key>kFromClcFunkcional</key>
+	<integer>100</integer>
+	<key>grDVel</key>
+	<integer>1</integer>
+	<key>grUUp</key>
+	<integer>-50</integer>
+	<key>grUDown</key>
+	<integer>50</integer>
+	<key>grB0</key>
+	<integer>10</integer>
+	<key>grH0</key>
+	<integer>10</integer>
+	<key>New item - 14</key>
+	<integer>0</integer>
+	<key>New item - 15</key>
+	<integer>0</integer>
+	<key>New item - 12</key>
+	<integer>0</integer>
+	<key>New item - 11</key>
+	<string></string>
+	<key>New item - 10</key>
+	<string></string>
+	<key>New item - 8</key>
+	<string></string>
+	<key>New item - 7</key>
+	<string></string>
+	<key>New item - 5</key>
+	<string></string>
+	<key>New item - 4</key>
+	<string></string>
+	<key>New item - 3</key>
+	<string></string>
+	<key>New item - 2</key>
+	<string></string>
+</dict>
+</plist>

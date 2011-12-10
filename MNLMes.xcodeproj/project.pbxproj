@@ -10,6 +10,8 @@
 		7030CFAA147028EB0079CB9E /* CDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030CFA9147028EB0079CB9E /* CDModel.m */; };
 		7030CFAE1470301A0079CB9E /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030CFAD147030190079CB9E /* Helpers.m */; };
 		7030CFBD147048530079CB9E /* GlobalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7030CFBC147048530079CB9E /* GlobalController.m */; };
+		7078C48F14936F3E00D964D3 /* PlistConf.m in Sources */ = {isa = PBXBuildFile; fileRef = 7078C48E14936F3E00D964D3 /* PlistConf.m */; };
+		7078C492149370A300D964D3 /* MNLMes Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7078C491149370A300D964D3 /* MNLMes Settings.plist */; };
 		70806C6014839E1200D1D5C0 /* Solver.m in Sources */ = {isa = PBXBuildFile; fileRef = 70806C5F14839E1200D1D5C0 /* Solver.m */; };
 		70806C641483A3E600D1D5C0 /* Elements+Metods.m in Sources */ = {isa = PBXBuildFile; fileRef = 70806C631483A3E600D1D5C0 /* Elements+Metods.m */; };
 		70806C671483A41600D1D5C0 /* Nodes+Metods.m in Sources */ = {isa = PBXBuildFile; fileRef = 70806C661483A41600D1D5C0 /* Nodes+Metods.m */; };
@@ -48,6 +50,9 @@
 		7030CFAD147030190079CB9E /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
 		7030CFBB147048530079CB9E /* GlobalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalController.h; sourceTree = "<group>"; };
 		7030CFBC147048530079CB9E /* GlobalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalController.m; sourceTree = "<group>"; };
+		7078C48D14936F3E00D964D3 /* PlistConf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistConf.h; sourceTree = "<group>"; };
+		7078C48E14936F3E00D964D3 /* PlistConf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistConf.m; sourceTree = "<group>"; };
+		7078C491149370A300D964D3 /* MNLMes Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MNLMes Settings.plist"; sourceTree = "<group>"; };
 		70806C5E14839E1200D1D5C0 /* Solver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Solver.h; sourceTree = "<group>"; };
 		70806C5F14839E1200D1D5C0 /* Solver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Solver.m; sourceTree = "<group>"; };
 		70806C621483A3E600D1D5C0 /* Elements+Metods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Elements+Metods.h"; sourceTree = "<group>"; };
@@ -124,11 +129,14 @@
 		7030CFAB14702D460079CB9E /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7078C48D14936F3E00D964D3 /* PlistConf.h */,
+				7078C48E14936F3E00D964D3 /* PlistConf.m */,
 				70FC956C147181BC00584B3F /* NSFileManager+DirectoryLocations.h */,
 				70FC956D147181BC00584B3F /* NSFileManager+DirectoryLocations.m */,
 				7030CFA7147028BD0079CB9E /* CoreData */,
 				7030CFAC147030190079CB9E /* Helpers.h */,
 				7030CFAD147030190079CB9E /* Helpers.m */,
+				7078C491149370A300D964D3 /* MNLMes Settings.plist */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -331,6 +339,7 @@
 				70993B5F1467EE17003812B7 /* Credits.rtf in Resources */,
 				70993B651467EE17003812B7 /* MainMenu.xib in Resources */,
 				709A3B3F14799A7C0020D838 /* README in Resources */,
+				7078C492149370A300D964D3 /* MNLMes Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +387,7 @@
 				70806C6014839E1200D1D5C0 /* Solver.m in Sources */,
 				70806C641483A3E600D1D5C0 /* Elements+Metods.m in Sources */,
 				70806C671483A41600D1D5C0 /* Nodes+Metods.m in Sources */,
+				7078C48F14936F3E00D964D3 /* PlistConf.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

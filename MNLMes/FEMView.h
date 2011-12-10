@@ -11,8 +11,11 @@
 
 typedef enum FEMViewMode {
     blank,
-    dxdy
+    dxdy,
+    two
 }FEMViewMode;
+
+
 
 
 @interface FEMView : NSView {
@@ -21,18 +24,16 @@ typedef enum FEMViewMode {
 
 @property (assign) FEMViewMode mode;
 
-- (void)makeCoordinateSistem;
-- (void)drawNodes;
-- (void)drawElemenys;
+
 - (void)drawCircleX: (double)x
                   Y: (double)y 
                   R: (double)r
-          WithColor:(NSColor*) rgba;
+          WithColor:(NSColor*)rgba;
 
 - (void)drawCirclePoint: (NSPoint)center
                       R: (double)r
               WithColor:(NSColor *)rgba;
 
-- (void)drawElement:(Elements*)elem 
-          WithColor:(NSColor*) rgba;;
+//- (void)drawElement:(Elements*)elem 
+//          WithColor:(NSColor*) rgba;
 @end

@@ -11,9 +11,11 @@
 
 @interface Solver : NSObject{
     CDModel* coreData;
+    NSProgressIndicator* progress;
 }
 
 -(void) go;
+-(void) addProgressIndicator:(NSProgressIndicator*)pr;
 
 
 @end

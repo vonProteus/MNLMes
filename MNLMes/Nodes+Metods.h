@@ -13,6 +13,7 @@
 -(NSPoint) pointValue;
 -(NSPoint) pointValueDxDy;
 -(void) dlog;
+-(double) getFunNode;
 
 
 @end

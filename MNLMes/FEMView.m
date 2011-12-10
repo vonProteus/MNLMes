@@ -8,6 +8,30 @@
 
 #import "FEMView.h"
 
+
+typedef enum drawMode {
+    before,
+    aftet
+}drawMode;
+
+
+@interface FEMView ()
+- (void)makeCoordinateSistem;
+//- (void)drawNodes;
+//- (void)drawElemenys;
+
+- (void)drawNodes:(drawMode)mode;
+- (void)drawElemeny:(drawMode)modes;
+- (void)drawElement:(Elements *)elem 
+          WithColor:(NSColor *)rgba 
+        andDrawMode:(drawMode)dMode;
+
+
+@end
+
+
+
+
 @implementation FEMView
 
 @synthesize mode;
@@ -36,8 +60,29 @@
     coreData = [CDModel sharedModel];    
     // Drawing code here.
     [self makeCoordinateSistem];
-    [self drawNodes];
-    [self drawElemenys];
+    
+    switch (self.mode) {
+        case blank:
+            [self drawNodes:before];
+            [self drawElemeny:before];
+            break;
+        case dxdy:
+            [self drawNodes:aftet];
+            [self drawElemeny:aftet];
+            break;
+        case two:
+            [self drawNodes:before];
+            [self drawElemeny:before];
+      
+            [self drawNodes:aftet];
+            [self drawElemeny:aftet];
+            break;
+            
+        default:
+            [self drawNodes:before];
+            [self drawElemeny:before];
+            break;
+    }
 
 }
 
@@ -58,26 +103,30 @@
     [path stroke];
 }
 
-- (void)drawNodes{
+- (void)drawNodes:(drawMode)dMode{
     NSColor* rgba;
-    
-    switch (self.mode) {
-        case blank:
+    NSPoint nodePoint;
+    for (Nodes* n in [coreData allNodes]) {
+    switch (dMode) {
+        case before:
             rgba = [NSColor blackColor];
+            nodePoint = [n pointValue];
             break;
-        case dxdy:
+        case aftet:
             rgba = [NSColor blueColor];
+            nodePoint = [n pointValueDxDy];
             break;
             
         default:
+            nodePoint = [n pointValue];
             rgba = [NSColor blackColor];
             break;
     }
 
 //    DLog(@"start");
-    for (Nodes* n in [coreData allNodes]) {
+    
 //        [n dlog];
-        [self drawCirclePoint:[Helpers locationInGCS:[n pointValue] 
+        [self drawCirclePoint:[Helpers locationInGCS:nodePoint
                                     fromCenterOfRect:self.bounds]
                             R:3 
                     WithColor:rgba];
@@ -124,14 +173,14 @@
     [self display];
 }
 
--(void) drawElemenys{
+-(void) drawElemeny:(drawMode)dMode{
     NSColor* rgba;
     
-    switch (self.mode) {
-        case blank:
+    switch (dMode) {
+        case before:
             rgba = [NSColor greenColor];
             break;
-        case dxdy:
+        case aftet:
             rgba = [NSColor redColor];
             break;
             
@@ -142,22 +191,26 @@
     
     
     for (Elements* e in [coreData allElements]) {
-        [self drawElement:e WithColor:rgba];
+        [self drawElement:e 
+                WithColor:rgba 
+              andDrawMode:dMode];
     }
     
 }
 
--(void) drawElement:(Elements *)elem WithColor:(NSColor *)rgba{
+-(void) drawElement:(Elements *)elem 
+          WithColor:(NSColor *)rgba 
+        andDrawMode:(drawMode)dMode{
     NSBezierPath* path = [NSBezierPath bezierPath];
     [rgba set];
     NSPoint p1,p2,p3;
-    switch (self.mode) {
-        case blank:
+    switch (dMode) {
+        case before:
             p1 = [elem.n1 pointValue];
             p2 = [elem.n2 pointValue];
             p3 = [elem.n3 pointValue];
             break;
-        case dxdy:
+        case aftet:
             p1 = [elem.n1 pointValueDxDy];
             p2 = [elem.n2 pointValueDxDy];
             p3 = [elem.n3 pointValueDxDy];
