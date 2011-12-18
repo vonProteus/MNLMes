@@ -50,21 +50,21 @@
                                       andE:E
                                       andk:k];
                 
-                double newDx = [node.dx doubleValue];
-                newDx += grDVel;
+                double dx = [node.dx doubleValue];
+                double newDx = dx + grDVel;
                 node.dx = [NSNumber numberWithDouble:newDx];
                 Fplus = [node getFunNodeWithA:a
                                          andb:b
                                          andE:E
                                          andk:k];
                 if (Fplus > F0) {
-                    newDx -= 2*grDVel;
+                    newDx = dx - grDVel;
                     node.dx = [NSNumber numberWithDouble:newDx];
                 }
 
                 
-                double newDy = [node.dy doubleValue];
-                newDy += grDVel;
+                double dy = [node.dy doubleValue];
+                double newDy = dy + grDVel;
                 node.dy = [NSNumber numberWithDouble:newDy];
                 Fplus = [node getFunNodeWithA:a
                                          andb:b
@@ -72,20 +72,26 @@
                                          andk:k];
                 
                 if (Fplus > F0) {
-                    newDy -= 2*grDVel;
+                    newDy = dy - grDVel;
                     node.dy = [NSNumber numberWithDouble:newDy];
                 }
                 
-                if (abs(F0) < 0.000000001) {
-                    F0 = 0.000000001;
-                }
+//                if (abs(F0) < 0.000000001) {
+//                    F0 = 0.000000001;
+//                }
                 
-                double dF = abs((Fplus - F0) / F0);
+//                double dF = abs((Fplus - F0) / F0);
                 [coreData saveCD];
             }
         }
     }
     [progress stopAnimation:nil];
+    
+    {
+        NSString* stringTMP = [NSString stringWithFormat:@"ok\n"];
+        DLog(@"%@",stringTMP);
+    }
+
     
     [coreData saveCD];
     

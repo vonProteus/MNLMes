@@ -98,7 +98,6 @@
                 [coreData makeElementFromNode1:n00 Node2:n10 Node3:n11];
                 [coreData makeElementFromNode1:n11 Node2:n01 Node3:n00];
             }
-            
         }
     }
     
@@ -126,6 +125,21 @@
 //    
 //    [coreData removeNodeByNumber:[n.number integerValue]];
 //    
+    
+    for (Nodes* n in [coreData allNodes]) {
+        NSUInteger nNumber = [n.number unsignedIntegerValue];
+        NSUInteger nLokCount = [n.lok count];
+        NSUInteger nStatus = [n.status unsignedIntegerValue];
+        {
+            NSString* stringTMP = [NSString stringWithFormat:@"%ld: lok %ld statius %ld\n", nNumber, nLokCount, nStatus];
+            DLog(@"%@",stringTMP);
+        }
+
+    }
+    
+    
+    
+    
     Solver* solver = [[Solver alloc] init];
     [self.progress startAnimation:Nil];
     [solver go];

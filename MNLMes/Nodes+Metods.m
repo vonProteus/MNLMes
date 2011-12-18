@@ -21,7 +21,8 @@
 }
 
 -(void) dlog{
-    DLog(@"%@ (%f,%f) dx:%f dy:%f ex:%f ey:%f status:%@", self.number, [self.x doubleValue], [self.y doubleValue], [self.dx doubleValue], [self.dy doubleValue], [self.ex doubleValue], [self.ey doubleValue], self.status);
+    NSUInteger lokCount = [self.lok count];
+    DLog(@"%@ (%f,%f) dx:%f dy:%f ex:%f ey:%f status:%@ lokSize:%ld", self.number, [self.x doubleValue], [self.y doubleValue], [self.dx doubleValue], [self.dy doubleValue], [self.ex doubleValue], [self.ey doubleValue], self.status, lokCount);
 }
 
 -(double) getFunNodeWithA:(double)a 
