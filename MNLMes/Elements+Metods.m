@@ -19,36 +19,36 @@
                         andk:(double)k {
     double clcFunkcional = 0;
     
-    double x1 = [((Nodes*)self.n1).x doubleValue];
-    double y1 = [((Nodes*)self.n1).y doubleValue];
-    double x2 = [((Nodes*)self.n2).x doubleValue];
-    double y2 = [((Nodes*)self.n2).y doubleValue];
-    double x3 = [((Nodes*)self.n3).x doubleValue];
-    double y3 = [((Nodes*)self.n3).y doubleValue];
+    double xi = [((Nodes*)self.n1).x doubleValue];
+    double yi = [((Nodes*)self.n1).y doubleValue];
+    double xj = [((Nodes*)self.n2).x doubleValue];
+    double yj = [((Nodes*)self.n2).y doubleValue];
+    double xk = [((Nodes*)self.n3).x doubleValue];
+    double yk = [((Nodes*)self.n3).y doubleValue];
     
-    double Ux1 = [((Nodes*)self.n1).dx doubleValue];
-    double Uy1 = [((Nodes*)self.n1).dy doubleValue];
-    double Ux2 = [((Nodes*)self.n2).dx doubleValue];
-    double Uy2 = [((Nodes*)self.n2).dy doubleValue];
-    double Ux3 = [((Nodes*)self.n3).dx doubleValue];
-    double Uy3 = [((Nodes*)self.n3).dy doubleValue];
+    double Uxi = [((Nodes*)self.n1).dx doubleValue];
+    double Uyi = [((Nodes*)self.n1).dy doubleValue];
+    double Uxj = [((Nodes*)self.n2).dx doubleValue];
+    double Uyj = [((Nodes*)self.n2).dy doubleValue];
+    double Uxk = [((Nodes*)self.n3).dx doubleValue];
+    double Uyk = [((Nodes*)self.n3).dy doubleValue];
     
     
     
-    double bi = y2 - y3;
-    double ci = x3 - x2;
-    double bj = y3 - y1;
-    double cj = x1 - x3;
-    double bk = y1 - y2;
-    double ck = x2 - x1;
+    double bi = yj - yk;
+    double ci = xk - xj;
+    double bj = yk - yi;
+    double cj = xi - xk;
+    double bk = yi - yj;
+    double ck = xj - xi;
     
-    double Ae = x2*y3 + x1*y2 + y1*x3 - y1*x2 - y2*x3 - x1*y3;
+    double Ae = (xj * yk) + (xi * yj) + (yi * xk) - (yi * xj) - (yj * xk) - (xi * yk);
     
-    double Ex = (bi*Ux1 + bj*Ux2 + bk*Ux3)/(2.0*Ae);
-    double Ey = (ci*Uy1 + cj*Uy2 + ck*Uy3)/(2.0*Ae);
-    double Exy = (bi*Uy1 + bj*Uy2 + bk*Uy3 + ci*Ux1 + cj*Ux2 + ck*Ux3)/(4.0*Ae);
+    double Ex = ((bi * Uxi) + (bj * Uxj) + (bk * Uxk)) / (2 * Ae);
+    double Ey = ((ci * Uyi) + (cj * Uyj) + (ck * Uyk)) / (2 * Ae);
+    double Exy = ((bi * Uyi) + (bj * Uyj) + (bk * Uyk) + (ci * Uxi) + (cj * Uxj) + (ck * Uxk)) / (4 * Ae);
     
-    double Ei = (sqrt(2)/3)*((Ex - Ey)*(Ex - Ey) + Ex*Ex + Ey*Ey + 6*Exy*Exy);
+    double Ei = 0.47140452079103173  * ((Ex - Ey) * (Ex - Ey) + (Ex * Ex) + (Ey * Ey) + 6 * (Exy * Exy));
     double E0 = (Ex + Ey)/3;
     
 //    double a = [[PlistConf valueForKey:@"aFromSi=a*Ei^b"] doubleValue];

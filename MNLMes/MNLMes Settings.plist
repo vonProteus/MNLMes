@@ -7,13 +7,13 @@
 	<key>bFromSi=a*Ei^b</key>
 	<real>0.18</real>
 	<key>numberOfIteration</key>
-	<integer>800</integer>
+	<integer>4800</integer>
 	<key>EFromClcFunkcional</key>
-	<integer>1</integer>
+	<real>1.7</real>
 	<key>kFromClcFunkcional</key>
-	<integer>1000</integer>
+	<integer>100</integer>
 	<key>grDVel</key>
-	<real>0.1</real>
+	<real>0.01</real>
 	<key>grUUp</key>
 	<integer>-10</integer>
 	<key>grUDown</key>
