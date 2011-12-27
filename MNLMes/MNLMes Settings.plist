@@ -15,9 +15,9 @@
 	<key>grDVel</key>
 	<real>0.01</real>
 	<key>grUUp</key>
-	<integer>-100</integer>
+	<integer>-10</integer>
 	<key>grUDown</key>
-	<integer>100</integer>
+	<integer>10</integer>
 	<key>grB0</key>
 	<integer>10</integer>
 	<key>grH0</key>

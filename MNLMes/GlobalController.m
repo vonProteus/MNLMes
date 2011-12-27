@@ -27,9 +27,9 @@
 }
 
 -(IBAction)removeLastNode:(id)sender{
-    Nodes* n = [coreData getNodeWithNumber:[coreData nextNumber]-1];
+    Nodes* n = [coreData getNodeWithNumber:28];
     [n dlog];
-    [coreData removeNodeByNumber:[coreData nextNumber]-1];
+    [coreData removeNodeByNumber:28];
     
     [fEMView display];
     

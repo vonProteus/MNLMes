@@ -25,24 +25,7 @@
     DLog(@"%@ (%f,%f) dx:%f dy:%f ex:%f ey:%f status:%@ lokSize:%ld", self.number, [self.x doubleValue], [self.y doubleValue], [self.dx doubleValue], [self.dy doubleValue], [self.ex doubleValue], [self.ey doubleValue], self.status, lokCount);
 }
 
--(double) getFunNodeWithA:(double)a 
-                     andb:(double)b 
-                     andE:(double)E 
-                     andk:(double)k{
-    double getFunNode = 0;
-    double Je = 0;
-    
-    for (Elements* e in self.lok) {
-        Je = [e clcFunkcionalWithA:a 
-                              andb:b 
-                              andE:E 
-                              andk:k];
-        getFunNode += Je;
-    }
-    
-    
-    return getFunNode;
-}
+
 
 
 

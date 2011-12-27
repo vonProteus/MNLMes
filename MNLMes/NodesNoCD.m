@@ -11,18 +11,19 @@
 
 @implementation NodesNoCD
 
-@dynamic dx;
-@dynamic dy;
-@dynamic number;
-@dynamic x;
-@dynamic y;
-@dynamic status;
-@dynamic ex;
-@dynamic ey;
-@dynamic lok;
+@synthesize dx;
+@synthesize dy;
+@synthesize number;
+@synthesize x;
+@synthesize y;
+@synthesize status;
+@synthesize ex;
+@synthesize ey;
+@synthesize lok;
 
 -(id) init{
     coreData = [CDModel sharedModel];
+    self.lok = [[NSMutableSet alloc] init];
     return self;
 }
 
@@ -39,6 +40,39 @@
     
     
     return self;
+}
+
+
+-(NSPoint) pointValue{
+    return NSMakePoint([self.x doubleValue], [self.y doubleValue]);
+}
+
+-(NSPoint) pointValueDxDy{
+    return NSMakePoint([self.x doubleValue] + [self.dx doubleValue], [self.y doubleValue]+ [self.dy doubleValue]);
+}
+
+-(void) dlog{
+    NSUInteger lokCount = [self.lok count];
+    DLog(@"%@ (%f,%f) dx:%f dy:%f ex:%f ey:%f status:%@ lokSize:%ld", self.number, [self.x doubleValue], [self.y doubleValue], [self.dx doubleValue], [self.dy doubleValue], [self.ex doubleValue], [self.ey doubleValue], self.status, lokCount);
+}
+
+-(double) getFunNodeWithA:(double)a 
+                     andb:(double)b 
+                     andE:(double)E 
+                     andk:(double)k{
+    double getFunNode = 0;
+    double Je = 0;
+    
+    for (ElementsNoCD* e in self.lok) {
+        Je = [e clcFunkcionalWithA:a 
+                              andb:b 
+                              andE:E 
+                              andk:k];
+        getFunNode += Je;
+    }
+    
+    
+    return getFunNode;
 }
 
 

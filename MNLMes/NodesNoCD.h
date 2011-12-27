@@ -25,7 +25,7 @@
 @property (nonatomic, retain) NSNumber * status;
 @property (nonatomic, retain) NSNumber * ex;
 @property (nonatomic, retain) NSNumber * ey;
-@property (nonatomic, retain) NSSet *lok;
+@property (nonatomic, retain) NSMutableSet *lok;
 
 -(NSPoint) pointValue;
 -(NSPoint) pointValueDxDy;

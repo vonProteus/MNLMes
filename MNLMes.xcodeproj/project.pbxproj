@@ -30,6 +30,8 @@
 		709A3B3A14796A5F0020D838 /* Nodes.m in Sources */ = {isa = PBXBuildFile; fileRef = 709A3B3914796A5F0020D838 /* Nodes.m */; };
 		709A3B3D14796BE40020D838 /* Elements.m in Sources */ = {isa = PBXBuildFile; fileRef = 709A3B3C14796BE40020D838 /* Elements.m */; };
 		709A3B3F14799A7C0020D838 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 709A3B3E14799A7C0020D838 /* README */; };
+		70BB5F2214AA21D800A1D3B4 /* NodesNoCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BB5F2114AA21D800A1D3B4 /* NodesNoCD.m */; };
+		70BB5F2614AA322400A1D3B4 /* ElementsNoCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BB5F2514AA322400A1D3B4 /* ElementsNoCD.m */; };
 		70FC956E147181BC00584B3F /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FC956D147181BC00584B3F /* NSFileManager+DirectoryLocations.m */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,10 @@
 		709A3B3B14796BE40020D838 /* Elements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Elements.h; sourceTree = "<group>"; };
 		709A3B3C14796BE40020D838 /* Elements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Elements.m; sourceTree = "<group>"; };
 		709A3B3E14799A7C0020D838 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		70BB5F2014AA21D800A1D3B4 /* NodesNoCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodesNoCD.h; sourceTree = "<group>"; };
+		70BB5F2114AA21D800A1D3B4 /* NodesNoCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodesNoCD.m; sourceTree = "<group>"; };
+		70BB5F2414AA322400A1D3B4 /* ElementsNoCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementsNoCD.h; sourceTree = "<group>"; };
+		70BB5F2514AA322400A1D3B4 /* ElementsNoCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElementsNoCD.m; sourceTree = "<group>"; };
 		70FC956C147181BC00584B3F /* NSFileManager+DirectoryLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DirectoryLocations.h"; sourceTree = "<group>"; };
 		70FC956D147181BC00584B3F /* NSFileManager+DirectoryLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DirectoryLocations.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +128,10 @@
 				70806C631483A3E600D1D5C0 /* Elements+Metods.m */,
 				70806C651483A41600D1D5C0 /* Nodes+Metods.h */,
 				70806C661483A41600D1D5C0 /* Nodes+Metods.m */,
+				70BB5F2014AA21D800A1D3B4 /* NodesNoCD.h */,
+				70BB5F2114AA21D800A1D3B4 /* NodesNoCD.m */,
+				70BB5F2414AA322400A1D3B4 /* ElementsNoCD.h */,
+				70BB5F2514AA322400A1D3B4 /* ElementsNoCD.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -402,6 +412,8 @@
 				70806C641483A3E600D1D5C0 /* Elements+Metods.m in Sources */,
 				70806C671483A41600D1D5C0 /* Nodes+Metods.m in Sources */,
 				7078C48F14936F3E00D964D3 /* PlistConf.m in Sources */,
+				70BB5F2214AA21D800A1D3B4 /* NodesNoCD.m in Sources */,
+				70BB5F2614AA322400A1D3B4 /* ElementsNoCD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

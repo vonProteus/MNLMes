@@ -10,10 +10,8 @@
 
 @interface Elements (Metods)
 
--(double) clcFunkcionalWithA:(double)a 
-                        andb:(double)b 
-                        andE:(double)E 
-                        andk:(double)k;
+
+
 
 
 @end
