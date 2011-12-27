@@ -15,17 +15,17 @@
 	<key>grDVel</key>
 	<real>0.01</real>
 	<key>grUUp</key>
-	<integer>-10</integer>
+	<integer>-100</integer>
 	<key>grUDown</key>
-	<integer>10</integer>
+	<integer>100</integer>
 	<key>grB0</key>
 	<integer>10</integer>
 	<key>grH0</key>
 	<integer>10</integer>
-	<key>New item - 14</key>
-	<integer>0</integer>
-	<key>New item - 15</key>
-	<integer>0</integer>
+	<key>rInNodes</key>
+	<integer>25</integer>
+	<key>numberOfNodes</key>
+	<integer>13</integer>
 	<key>New item - 12</key>
 	<integer>0</integer>
 	<key>New item - 11</key>
