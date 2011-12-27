@@ -46,7 +46,7 @@
     double grUDown = [[PlistConf valueForKey:@"grUDown"] doubleValue];
     double grUUp = [[PlistConf valueForKey:@"grUUp"] doubleValue];
     
-    int size = 6;
+    int size = 13;
     int size12 = size/2;
     
     for (int a = -size12; a <= size12; ++a) {
@@ -126,16 +126,16 @@
 //    [coreData removeNodeByNumber:[n.number integerValue]];
 //    
     
-    for (Nodes* n in [coreData allNodes]) {
-        NSUInteger nNumber = [n.number unsignedIntegerValue];
-        NSUInteger nLokCount = [n.lok count];
-        NSUInteger nStatus = [n.status unsignedIntegerValue];
-        {
-            NSString* stringTMP = [NSString stringWithFormat:@"%ld: lok %ld statius %ld\n", nNumber, nLokCount, nStatus];
-            DLog(@"%@",stringTMP);
-        }
-
-    }
+//    for (Nodes* n in [coreData allNodes]) {
+//        NSUInteger nNumber = [n.number unsignedIntegerValue];
+//        NSUInteger nLokCount = [n.lok count];
+//        NSUInteger nStatus = [n.status unsignedIntegerValue];
+//        {
+//            NSString* stringTMP = [NSString stringWithFormat:@"%ld: lok %ld statius %ld\n", nNumber, nLokCount, nStatus];
+//            DLog(@"%@",stringTMP);
+//        }
+//
+//    }
     
     
     

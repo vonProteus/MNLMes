@@ -56,16 +56,16 @@
         DLog(@"%@",stringTMP);
     }
     
-    for (NodesNoCD* n in allNodesNoCD) {
-        NSUInteger nNumber = [n.number unsignedIntegerValue];
-        NSUInteger nLokCount = [n.lok count];
-        NSUInteger nStatus = [n.status unsignedIntegerValue];
-        {
-            NSString* stringTMP = [NSString stringWithFormat:@"%ld: lok %ld statius %ld\n", nNumber, nLokCount, nStatus];
-            DLog(@"%@",stringTMP);
-        }
-        
-    }
+//    for (NodesNoCD* n in allNodesNoCD) {
+//        NSUInteger nNumber = [n.number unsignedIntegerValue];
+//        NSUInteger nLokCount = [n.lok count];
+//        NSUInteger nStatus = [n.status unsignedIntegerValue];
+//        {
+//            NSString* stringTMP = [NSString stringWithFormat:@"%ld: lok %ld statius %ld\n", nNumber, nLokCount, nStatus];
+//            DLog(@"%@",stringTMP);
+//        }
+//        
+//    }
 
     
     {
