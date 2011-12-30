@@ -74,7 +74,7 @@
         [elems addObject:line];
     }
     
-//    NSUInteger line0Count2 = [elems count]/2;
+
     for (int a = 0; a < [elems count]-2; a+=2) {
         NSMutableArray* line0 = [elems objectAtIndex:a];
         NSMutableArray* line1 = [elems objectAtIndex:a+1];
@@ -104,14 +104,7 @@
 //            n00--n01--n02
 
             
-//            [coreData makeElementFromNode1:n11 Node2:n00 Node3:n01];
-//            [coreData makeElementFromNode1:n11 Node2:n10 Node3:n00];
-//            [coreData makeElementFromNode1:n11 Node2:n20 Node3:n10];
-//            [coreData makeElementFromNode1:n11 Node2:n21 Node3:n20];
-//            [coreData makeElementFromNode1:n11 Node2:n22 Node3:n21];
-//            [coreData makeElementFromNode1:n11 Node2:n12 Node3:n22];
-//            [coreData makeElementFromNode1:n11 Node2:n02 Node3:n12];
-//            [coreData makeElementFromNode1:n11 Node2:n01 Node3:n02];
+
 
             [coreData makeElementFromNode1:n20 Node2:n21 Node3:n11];
             [coreData makeElementFromNode1:n20 Node2:n11 Node3:n10];
@@ -123,15 +116,7 @@
             [coreData makeElementFromNode1:n11 Node2:n02 Node3:n01];
             
             
-            
-//            [coreData makeElementFromNode1:n10 Node2:n00 Node3:n11];
-//            [coreData makeElementFromNode1:n00 Node2:n10 Node3:n11];
-//            [coreData makeElementFromNode1:n10 Node2:n11 Node3:n20];
-//            [coreData makeElementFromNode1:n20 Node2:n11 Node3:n21];
-//            [coreData makeElementFromNode1:n11 Node2:n01 Node3:n02];
-//            [coreData makeElementFromNode1:n11 Node2:n02 Node3:n12];
-//            [coreData makeElementFromNode1:n11 Node2:n12 Node3:n22];
-//            [coreData makeElementFromNode1:n11 Node2:n22 Node3:n21];
+
             
             
         }
@@ -139,27 +124,6 @@
         
         
         
-//        if (a >= line0Count2) {
-//            for (int b = 0; b < [line0 count]-1; ++b) {
-//                Nodes* n00 = (Nodes*)[line0 objectAtIndex:b];
-//                Nodes* n01 = (Nodes*)[line0 objectAtIndex:b+1];
-//                Nodes* n10 = (Nodes*)[line1 objectAtIndex:b];
-//                Nodes* n11 = (Nodes*)[line1 objectAtIndex:b+1];
-//                
-//                [coreData makeElementFromNode1:n00 Node2:n10 Node3:n01];
-//                [coreData makeElementFromNode1:n10 Node2:n11 Node3:n01];
-//            }
-//        } else {
-//            for (int b = 0; b < [line0 count]-1; ++b) {
-//                Nodes* n00 = (Nodes*)[line0 objectAtIndex:b];
-//                Nodes* n01 = (Nodes*)[line0 objectAtIndex:b+1];
-//                Nodes* n10 = (Nodes*)[line1 objectAtIndex:b];
-//                Nodes* n11 = (Nodes*)[line1 objectAtIndex:b+1];
-//                
-//                [coreData makeElementFromNode1:n00 Node2:n10 Node3:n11];
-//                [coreData makeElementFromNode1:n11 Node2:n01 Node3:n00];
-//            }
-//        }
     }
     
     [coreData saveCD];
@@ -169,37 +133,6 @@
 }
 
 -(IBAction) addMash:(id)sender{
-//    DLog(@"---------------");
-//    Nodes* n = [[coreData allNodes] objectAtIndex:50];
-//    NSMutableSet* sett = [[NSMutableSet alloc] init];
-//    DLog(@"lok: %ld", [n.lok count]);
-//    for (Elements* elm in n.lok){
-//        [sett addObject:elm.n1.number];
-//        [sett addObject:elm.n2.number];
-//        [sett addObject:elm.n3.number];
-//    }
-//    
-//    for (NSNumber* n in sett) {
-//        DLog(@"%@",n);
-//    }
-//    DLog(@"count %ld", [sett count]);
-//    
-//    [coreData removeNodeByNumber:[n.number integerValue]];
-//    
-    
-//    for (Nodes* n in [coreData allNodes]) {
-//        NSUInteger nNumber = [n.number unsignedIntegerValue];
-//        NSUInteger nLokCount = [n.lok count];
-//        NSUInteger nStatus = [n.status unsignedIntegerValue];
-//        {
-//            NSString* stringTMP = [NSString stringWithFormat:@"%ld: lok %ld statius %ld\n", nNumber, nLokCount, nStatus];
-//            DLog(@"%@",stringTMP);
-//        }
-//
-//    }
-    
-    
-    
     
     Solver* solver = [[Solver alloc] init];
     [self.progress startAnimation:Nil];
