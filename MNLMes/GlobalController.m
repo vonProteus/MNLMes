@@ -74,7 +74,7 @@
         [elems addObject:line];
     }
     
-    NSUInteger line0Count2 = [elems count]/2;
+//    NSUInteger line0Count2 = [elems count]/2;
     for (int a = 0; a < [elems count]-2; a+=2) {
         NSMutableArray* line0 = [elems objectAtIndex:a];
         NSMutableArray* line1 = [elems objectAtIndex:a+1];
