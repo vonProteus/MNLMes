@@ -1,0 +1,47 @@
+Projekt na mechanike nie liniowa na AGH 2011/12
+
+mamy zrobic coś takiego
+
+
+Ćwiczenie 2. Napisanie programu MES dla jednego elementu.
+Jako pomoc do tego ćwiczenia można wykorzystać materiały zamieszczone na stronie: http://home.agh.edu.pl/~milenin/Dydaktyka/MN/L_2/L2.htm
+oraz na stronie
+http://home.agh.edu.pl/~milenin/Dydaktyka/MN/L_3_MES/L_3.htm
+Cel ćwiczenia: Wyznaczanie parametrów dla pojedynczego elementu skończonego takich jak: składowe tensora odkształceń, intensywność odkształceń, parametry E’, k i wartość funkcjonału.
+Zadania do wykonania:
+1. Zapoznanie się ze wzorami zawartymi w pomocy do ćwiczenia albo w skrypcie Profesora Milenina.
+2. Napisanie programu do obliczeń i wizualizacji jednego elementu skończonego (tak żeby pokazać jak on wygląda, można też go opisać tzn. zaznaczyć węzły – tutaj jest dowolność). Użytkownik powinien móc wprowadzać dane wejściowe, a po naciśnięciu klawisza „oblicz” powinny pojawiać się wartości liczbowe dla poszczególnych parametrów.
+3. Efektem końcowym jest zestaw parametrów obliczanych dla jednego elementu skończonego, których znaczenie student powinien skomentować.
+4. W ramach sprawozdania należy pokazać wyniki obliczeń dla różnych zestawów danych wejściowych w formie zapisanych w katalogu zrzutów ekranowych. Otrzymane wyniki również trzeba omówić.
+
+Ćwiczenie 3. Napisanie programu MES dla wielu elementów.
+Jako pomoc do tego ćwiczenia można wykorzystać materiały zamieszczone na stronie: http://home.agh.edu.pl/~milenin/Dydaktyka/MN/L_4_MES/L4.htm
+Cel ćwiczenia: Napisanie programu MES w 2D dla wielu elementów z wykorzystaniem liniowej sprężystości i sprężysto-plastyczności do symulacji próby spęczania albo próby rozciągania.
+Zadania do wykonania:
+1. Napisanie programu do obliczeń i wizualizacji wielu elementów skończonych. Użytkownik powinien móc wprowadzać dane wejściowe, a po naciśnięciu klawisza „oblicz” powinny pojawiać się wartości liczbowe dla poszczególnych parametrów takich jak te wymienione w ćwiczeniu 2. Siatka MES powinna odkształcać się równomiernie, poprawnie, nawet przy większych odkształceniach.
+2. Testowanie programu powinno móc ustalić znaczenie poszczególnych parametrów w kodzie (ustalić czy to jest parametr fizyczny czy numeryczny) oraz określić wpływ określonego parametru na wynik. Należy wygenerować siatki o różnej gęstości, różnych wymiarach próbek i odkształcać je w różnych sposób (tzn. duże odkształcenia siatki też powinny być uwzględniane). Osobno należy wykonać testowanie dla sprężystości (dane obliczyć z ćwiczenia 1) i sprężysto-plastyczności (dane wziąć z ćwiczenia 1). Dopiero po testowaniu powinno się przejść do ulepszeń kodu.
+3. W programie należy zaproponować własne rozwiązania np. takie jak: algorytm generacji siatki (można też siatkę wygenerować w programie komercyjnym albo jakimś dostępnym generatorze siatki, własny generator siatki będzie wyżej punktowany), można zaproponować inną metodę minimalizacji funkcjonału niż ta podana w przykładzie, itd., itp., tak aby otrzymać dokładne rozwiązanie i żeby siatka odkształcała się poprawnie i równomiernie, nawet przy większych odkształceniach.
+4. Opracowanie poprawnie działającego programu pozwala wykonać kolejne ćwiczenia.
+
+Ćwiczenie 4. Zastosowanie biliniowego modelu materiału w kodzie MES (modyfikacja kodu z ćwiczenia 3) Jako pomoc do tego ćwiczenia można wykorzystać materiały zamieszczone na stronie: http://home.agh.edu.pl/~milenin/Dydaktyka/MN/L_5_MES/L_5.htm
+Cel ćwiczenia: Modyfikacja programu MES dla wielu elementów z wykorzystaniem biliniowej sprężysto- plastyczności do symulacji próby spęczania albo próby rozciągania.
+Zadania do wykonania:
+1. Wprowadzić biliniowy model materiału do kodu i przeprowadzić modyfikacje, które są niezbędne, żeby model był brany pod uwagę w obliczeniach.
+2. Parametry w modelu biliniowym dobrać tak, aby były zbliżone do wyników otrzymanych w ćwiczeniu 1.
+3. Przetestować program dla różnych parametrów, czyli wykonać analizy podobne do tych przeprowadzonych podczas testowania programu w ćwiczeniu 3 (patrz punkt 2 w ćwiczeniu 3).
+
+Ćwiczenie 5. Zastosowanie modelu tarcia w kodzie MES (modyfikacja kodu z ćwiczenia 3 i 4)
+Jako pomoc do tego ćwiczenia można wykorzystać materiały zamieszczone na stronie: http://home.agh.edu.pl/~milenin/Dydaktyka/MN/L_6_MES/L_6.htm
+Cel ćwiczenia: Modyfikacja programu MES dla wielu elementów z wykorzystaniem modelu tarcia do symulacji próby spęczania albo próby rozciągania.
+Zadania do wykonania:
+1. Wprowadzić model tarcia do kodu i przeprowadzić modyfikacje, które są niezbędne, żeby model był brany pod uwagę w obliczeniach. Model tarcia wprowadzić do kodu z sprężystością (ćwiczenie 3), jak i do kodu z sprężysto-plastycznością (ćwiczenie 3 i 4).
+2. Model tarcia można znaleźć w literaturze albo można zastosować kilka modeli.
+3. Przetestować program dla różnych parametrów takich jak wielkość próbek, gęstość siatki, model tarcia i współczynniki tarcia.
+4. Wykonać wykresy naprężeń na kontakcie dla rozpatrywanych wariantów (patrz punkt 3) i wykresy Ux na kontakcie dla rozpatrywanych wariantów (patrz punkt 3).
+
+Ćwiczenie 6. Wprowadzenie defektu do siatki MES (modyfikacja kodu z ćwiczenia 5)
+Jako pomoc do tego ćwiczenia można wykorzystać materiały zamieszczone na stronie: http://home.agh.edu.pl/~milenin/Dydaktyka/MN/L_7_MES/L_7.htm
+Cel ćwiczenia: Modyfikacja programu MES dla wielu elementów z wprowadzeniem defektu do siatki MES i symulacji próby spęczania albo próby rozciągania.
+Zadania do wykonania:
+1. Wprowadzić defekt do siatki MES (można wykorzystać kod z ćwiczenia 5 – kod MES z tarciem i biliniową sprężysto-plastycznością).
+2. Przetestować program dla różnych wartości parametrów takich jak wielkość próbek, gęstość siatki, wielkość defektu, położenie defektu, model tarcia, współczynniki tarcia i różne odkształcenia.
