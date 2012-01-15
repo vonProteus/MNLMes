@@ -141,6 +141,26 @@
                 
 //                double dF = abs((Fplus - F0) / F0);
                 }
+            
+            if ([node.status unsignedIntegerValue] == 1) {
+                F0 = [node getFunNodeWithA:a
+                                      andb:b
+                                      andE:E
+                                      andk:k];
+                
+                double dx = [node.dx doubleValue];
+                double newDx = dx + grDVel;
+                node.dx = [NSNumber numberWithDouble:newDx];
+                Fplus = [node getFunNodeWithA:a
+                                         andb:b
+                                         andE:E
+                                         andk:k];
+                if (Fplus > F0) {
+                    newDx = dx - grDVel;
+                    node.dx = [NSNumber numberWithDouble:newDx];
+                }
+            }
+
         }
     }
     [progress stopAnimation:nil];
