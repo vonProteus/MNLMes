@@ -50,9 +50,9 @@
     
     double Ae = (xj * yk) + (xi * yj) + (yi * xk) - (yi * xj) - (yj * xk) - (xi * yk);
     
-    double Ex = ((bi * Uxi) + (bj * Uxj) + (bk * Uxk)) / (2 * Ae);
-    double Ey = ((ci * Uyi) + (cj * Uyj) + (ck * Uyk)) / (2 * Ae);
-    double Exy = ((bi * Uyi) + (bj * Uyj) + (bk * Uyk) + (ci * Uxi) + (cj * Uxj) + (ck * Uxk)) / (4 * Ae);
+    double Ex = ((bi * Uxi) + (bj * Uxj) + (bk * Uxk)) / (2 * Ae); //epsilon x
+    double Ey = ((ci * Uyi) + (cj * Uyj) + (ck * Uyk)) / (2 * Ae); //epsilon y
+    double Exy = ((bi * Uyi) + (bj * Uyj) + (bk * Uyk) + (ci * Uxi) + (cj * Uxj) + (ck * Uxk)) / (4 * Ae); //epsilon xy
     
     double Ei = 0.47140452079103173  * ((Ex - Ey) * (Ex - Ey) + (Ex * Ex) + (Ey * Ey) + 6 * (Exy * Exy));
     double E0 = (Ex + Ey)/3;
@@ -66,7 +66,16 @@
     
     //    double Je = a*pow(Ei, (b + 1)) / (b + 1)*Ae + k*E0*E0*Ae;
     
+//    double Si=a* pow(Ei,b);
+
+    double Ei1 = 2;
     
+    if (E*Ei < Ei1) {
+        double oZ_1 = 2;
+        double alfa = 1;
+        double oZ_ = oZ_1 + alfa*(Ei - Ei1);
+        E = oZ_/Ei;
+    }
     
     
     double Je = E*Ei*Ei*Ae + k*E0*E0*Ae;
