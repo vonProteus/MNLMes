@@ -268,6 +268,42 @@
     
 }
 
+- (Nodes*) getNodeWithX:(float)x 
+                   andY:(float)y 
+                    inR:(float)r{
+    NSManagedObjectContext *myManagedObjectContext = [[CDModel sharedModel] managedObjectContext];
+    
+    NSEntityDescription *nodes = [NSEntityDescription entityForName:@"Nodes" inManagedObjectContext:myManagedObjectContext];
+    NSFetchRequest *requestToNodes = [[NSFetchRequest alloc] init]; 
+    [requestToNodes setEntity:nodes]; 
+    NSPredicate *myNodeQuestion = [NSPredicate predicateWithFormat:@"x >= %f && x =< %f && y >= %f && y =< %f", x-r, x+r, y-r, y+r];
+    [requestToNodes setPredicate:myNodeQuestion];
+    
+    //    DLog(@"pre out");
+    NSError *error = nil;  
+    NSMutableArray* output = [[myManagedObjectContext executeFetchRequest:requestToNodes error:&error] mutableCopy]; 
+    //    DLog(@"post out");
+    
+    if(error == nil){
+        if ([output count] == 1) {
+            return [output objectAtIndex:0];
+        } else {
+            return nil;
+        }
+        
+    } else {
+        {
+            NSString* stringTMP = [NSString stringWithFormat:@"error\n"];
+            DLog(@"%@",stringTMP);
+        }
+        
+    }
+    
+    return nil;    
+    
+    
+}
+
 -(Nodes*) getNodeWithNumber:(NSInteger)number{
     NSManagedObjectContext *myManagedObjectContext = [[CDModel sharedModel] managedObjectContext];
     

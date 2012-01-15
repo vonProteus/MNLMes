@@ -161,8 +161,23 @@ typedef enum drawMode {
     NSPoint location = [self.window convertScreenToBase:[NSEvent mouseLocation]];
 //    DLog(@"%f %f", location.x,location.y);
     location = [Helpers locationInLCS:location fromCenterOfRect:self.bounds];
-//    DLog(@"%f %f", location.x,location.y);
-    [coreData addNewNodeWithX:location.x Y:location.y DX:0 DY:0];
+     DLog(@"%f %f", location.x,location.y);
+//    [coreData addNewNodeWithX:location.x Y:location.y DX:0 DY:0];
+    
+    Nodes* n = [coreData getNodeWithX:location.x 
+                                 andY:location.y 
+                                  inR:3];
+    
+//    [n dlog];
+    
+    NSInteger nodeNumber = [n.number integerValue];
+//    {
+//        NSString* stringTMP = [NSString stringWithFormat:@"node nimber %ld\n", nodeNumber];
+//        DLog(@"%@",stringTMP);
+//    }
+
+    [coreData removeNodeByNumber:nodeNumber];
+    
 //    location = [Helpers locationInGCS:location fromCenterOfRect:fEMView.bounds];
 //    DLog(@"%f %f", location.x,location.y);
     [coreData saveCD];

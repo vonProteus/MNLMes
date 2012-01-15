@@ -30,6 +30,7 @@
 - (NSInteger) nextNumber;
 - (Nodes*) addNewNodeWithX:(double)x Y:(double)y DX:(double)dx DY:(double)dy;
 - (Nodes*) getNodeWithNumber:(NSInteger)number;
+- (Nodes*) getNodeWithX:(float)x andY:(float)y inR:(float)r;
 
 - (NSArray*) allNodes;
 - (NSArray*) allElements;
