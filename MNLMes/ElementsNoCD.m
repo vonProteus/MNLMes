@@ -68,13 +68,16 @@
     
 //    double Si=a* pow(Ei,b);
 
-    double Ei1 = 2;
+    double Ei1 = 0.001;
     
     if (Ei >= Ei1) {
+//        DLog(@"test: \n");
         double oZ_1 = 2;
         double alfa = 1;
         double oZ_ = oZ_1 + alfa*(Ei - Ei1);
         E = oZ_/Ei;
+    } else {
+//        DLog(@"test: 2\n");
     }
     
     
