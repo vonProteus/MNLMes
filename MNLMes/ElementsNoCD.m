@@ -39,6 +39,10 @@
     double Uxk = [((Nodes*)self.n3).dx doubleValue];
     double Uyk = [((Nodes*)self.n3).dy doubleValue];
     
+    NSInteger Sti = [((Nodes*)self.n1).status integerValue];
+    NSInteger Stj = [((Nodes*)self.n2).status integerValue];
+    NSInteger Stk = [((Nodes*)self.n3).status integerValue];
+    
     
     
     double bi = yj - yk;
@@ -47,6 +51,39 @@
     double cj = xi - xk;
     double bk = yi - yj;
     double ck = xj - xi;
+    
+    
+    double L = 0;
+    double Uposl = 0;
+    
+    if (Sti == 1) {
+        if (Stj == 1) {
+            L = abs(xj - xi);
+            Uposl = (Uxj + Uxi) / 2;
+        }
+    }
+    
+    
+    if (Stj == 1) {
+        if (Stk == 1) {
+            L = abs(xj - xk);
+            Uposl = (Uxj + Uxk) / 2;
+        }
+    }
+    
+    
+    if (Sti == 1) {
+        if (Stk == 1) {
+            L = abs(xi - xk);
+            Uposl = (Uxi + Uxk) / 2;
+        }
+    }
+    
+    double Jt = 0;
+    Jt = L * Uposl * 0.1;
+    Jt = 0.1 * L * Uposl * Uposl;
+
+
     
     double Ae = (xj * yk) + (xi * yj) + (yi * xk) - (yi * xj) - (yj * xk) - (xi * yk);
     
@@ -81,7 +118,7 @@
     }
     
     
-    double Je = E*Ei*Ei*Ae + k*E0*E0*Ae;
+    double Je = E*Ei*Ei*Ae + k*E0*E0*Ae + Jt;
     
     clcFunkcional = Je;
     
