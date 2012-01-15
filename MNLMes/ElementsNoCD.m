@@ -70,7 +70,7 @@
 
     double Ei1 = 2;
     
-    if (E*Ei < Ei1) {
+    if (Ei >= Ei1) {
         double oZ_1 = 2;
         double alfa = 1;
         double oZ_ = oZ_1 + alfa*(Ei - Ei1);
