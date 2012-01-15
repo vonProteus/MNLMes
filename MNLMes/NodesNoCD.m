@@ -22,6 +22,7 @@
 @synthesize lok;
 
 -(id) init{
+    self = [super init];
     coreData = [CDModel sharedModel];
     self.lok = [[NSMutableSet alloc] init];
     return self;

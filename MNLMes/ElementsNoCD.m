@@ -14,6 +14,7 @@
 @synthesize n3;
 
 -(id) init{
+    self = [super init];
     coreData = [CDModel sharedModel];
     return self;
 }
@@ -64,6 +65,8 @@
     
     
     //    double Je = a*pow(Ei, (b + 1)) / (b + 1)*Ae + k*E0*E0*Ae;
+    
+    
     
     
     double Je = E*Ei*Ei*Ae + k*E0*E0*Ae;
