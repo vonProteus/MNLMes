@@ -64,6 +64,8 @@
     
     
     //    double Je = a*pow(Ei, (b + 1)) / (b + 1)*Ae + k*E0*E0*Ae;
+    
+    
     double Je = E*Ei*Ei*Ae + k*E0*E0*Ae;
     
     clcFunkcional = Je;
